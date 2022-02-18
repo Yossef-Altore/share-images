@@ -12,3 +12,7 @@ mongoose
   .catch((e) => {
     console.log(e);
   });
+
+/* mongoose
+  .connect("mongodb://localhost:27017/myapp")
+  .then(() => console.log("connected")); */
