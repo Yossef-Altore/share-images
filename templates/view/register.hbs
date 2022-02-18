@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <title>Image Of The Day | Register</title>
+    <link rel="shortcut icon" href="images/pageIcon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
+  <body id="registerPage">
+    <header>
+      <div>
+        <h1>Simply Share Your pictures</h1>
+      </div>
+      <div>
+        <a href="/">HOME</a>
+        <span>|</span>
+        <a href="/login">Login</a>
+      </div>
+    </header>
+    <main>
+      <div class="container mt-5 mb-5 ml-2">
+        <div class="row d-flex align-items-center justify-content-start">
+          <div class="col-md-6">
+            <div class="card px-5 py-5" style="border-radius: 15px;">
+              <span class="circle"><i class="fa fa-check"></i></span>
+              <h5 class="mt-3">Create new account<br />
+                Share your pictures with the globe</h5>
+              <small class="mt-2 text-muted">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Sed, animi!</small>
+              <div class="form-input">
+                <i class="fa fa-envelope"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                  id="userEmail"
+                />
+              </div>
+              <div class="form-input">
+                <i class="fa fa-user"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="User name"
+                  id="userName"
+                />
+              </div>
+              <div class="form-input">
+                <i class="fa fa-lock"></i>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="password"
+                  id="userPassword"
+                />
+              </div>
+              <div id="resHandler"></div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  I agree all the statements
+                </label>
+              </div>
+              <button
+                class="btn btn-primary mt-4 signup"
+                id="registerBtn"
+              >Register</button>
+              <div class="text-center mt-4">
+                <span>Already a member?</span>
+                <a href="/login" class="text-decoration-none">Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/register.js"></script>
+  </body>
+</html>

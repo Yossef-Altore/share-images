@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/pageIcon.png" type="image/x-icon" />
+    <script defer src="js/userHandler.js"></script>
+    <script defer src="js/logout.js"></script>
+    <link rel="stylesheet" href="sass/main.css" />
+    <title>Image Of The Day | account</title>
+  </head>
+  <body id="userPage">
+    <header>
+      <div>
+        <h1>Simply Share Your pictures</h1>
+      </div>
+      <div>
+        <a href="/">HOME</a>
+        <span>|</span>
+        <a href="/logout" id="logoutBtn">Logout</a>
+      </div>
+    </header>
+    <main>
+      <h2>Welcome {{name}}</h2>
+      <div id="userReqHandler">
+        <div id="uploadImageDiv">
+          <p>Upload Image</p>
+          <input type="file" name="file" id="uploadImage" />
+        </div>
+        <div id="myImages">
+          <button id="myImagesBtn">My Images</button>
+        </div>
+        <div id="allImages">
+          <button id="allImagesBtn">All Images</button>
+        </div>
+      </div>
+      <div id="imagesHandler">
+      </div>
+    </main>
+    <div id="divForBigImage">
+      <img
+        src="usersImages/original/1645186290384deep-universe.jpg"
+        alt=""
+        id="bigImage"
+      />
+      <span id="closeBigImage">X</span>
+    </div>
+  </body>
+</html>
