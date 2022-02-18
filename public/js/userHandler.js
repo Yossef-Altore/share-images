@@ -28,6 +28,7 @@ closeBigImage.addEventListener("click", () => {
   divForBigImage.style.visibility = "hidden";
   main.style.opacity = "1";
   header.style.opacity = "1";
+  bigImage.src = "";
 });
 
 // -------------------------adding an image
