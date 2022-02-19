@@ -7,33 +7,59 @@ body#indexPage {
   background-image: url(../images/mainPageBgc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  @include phoneAndTablet {
+    background-image: none;
+    background-color: black;
+  }
+
   header {
     display: flex;
     height: 15vh;
     align-items: center;
     justify-content: space-between;
+    @include phoneAndTablet {
+      flex-direction: column;
+      justify-content: center;
+      height: 10vh;
+      gap: 10px;
+    }
     div {
       margin-left: 30px;
+      @include phoneAndTablet {
+        margin-left: 0;
+      }
       h1 {
         color: white;
         font-family: $mainHeaderFont;
         font-size: 2vw;
+        @include phoneAndTablet {
+          font-size: 4vw;
+        }
       }
     }
     div {
       font-family: Arial, Helvetica, sans-serif;
       margin-right: 60px;
+      @include phoneAndTablet {
+        margin-right: 0;
+      }
       a {
         color: white;
         cursor: pointer;
         font-size: 1.3vw;
         margin-right: 5px;
         text-decoration: none;
+        @include phoneAndTablet {
+          font-size: 3vw;
+        }
       }
       span {
         margin-right: 5px;
         color: wheat;
         font-size: 1.3vw;
+        @include phoneAndTablet {
+          font-size: 3vw;
+        }
       }
     }
   }
@@ -46,6 +72,9 @@ body#indexPage {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      @include phoneAndTablet {
+        flex-direction: column;
+      }
 
       img:nth-child(1) {
         position: relative;
@@ -61,6 +90,12 @@ body#indexPage {
           z-index: 3;
           transition: all 1s;
         }
+        @include phoneAndTablet {
+          left: 0;
+          width: 300px;
+          height: 450px;
+          opacity: 0.9;
+        }
       }
 
       img:nth-child(2) {
@@ -75,6 +110,9 @@ body#indexPage {
           transform: scale(1.3);
           z-index: 3;
           transition: all 1s;
+        }
+        @include phoneAndTablet {
+          display: none;
         }
       }
     }

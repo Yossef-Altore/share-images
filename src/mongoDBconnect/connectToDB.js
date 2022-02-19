@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const config = require("config");
 const dbConfig = config.get("Customer.dbConfig.dbName");
-mongoose
+/* mongoose
   .connect(dbConfig, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -11,7 +11,7 @@ mongoose
   })
   .catch((e) => {
     console.log(e);
-  });
-/* mongoose
+  }); */
+mongoose
   .connect("mongodb://localhost:27017/shareImages")
-  .then(() => console.log("connected")); */
+  .then(() => console.log("connected"));
