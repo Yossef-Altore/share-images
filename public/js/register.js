@@ -44,8 +44,7 @@ registerBtn.addEventListener("click", async () => {
     })
     .then((data) => {
       if (data.msg === "user registered") {
-        resHandler.innerHTML =
-          '<h6 style="color:lightGreen">Success. You can login now</h6>';
+        window.location = data.redirect;
       }
       if (data.msg === "email is not valid") {
         resHandler.innerHTML = '<h6 style="color:red">Email is not valid</h6>';
@@ -59,5 +58,3 @@ registerBtn.addEventListener("click", async () => {
       alert(e);
     });
 });
-
-// - - -  -- - - - - - - - - - - - - - - - login

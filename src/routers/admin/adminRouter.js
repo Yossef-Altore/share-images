@@ -72,7 +72,6 @@ router.get("/admin/control/deleteusers", adminAuth, async (req, res) => {
 // admin delete all images
 router.get("/admin/control/deleteimages", adminAuth, async (req, res) => {
   try {
-    console.log("here");
     fse
       .emptyDir(originalImagesPath)
       .then(() => {

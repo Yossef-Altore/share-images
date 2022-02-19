@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
   },
   fileFilter(req, file, cb) {
     if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
-      return cb(new Error("wrong type of file"));
+      return cb(Error("Wrong type of file. Only jpg, jpeg and png"));
     }
     cb(undefined, true);
   },

@@ -18,7 +18,7 @@ router.post("/registerNewUser", async (req, res) => {
   const user = new User(req.body);
   try {
     await user.save();
-    res.status(201).send({ msg: "user registered" });
+    res.status(201).send({ msg: "user registered", redirect: "/login" });
   } catch (error) {
     if (error.message === "User validation failed: email: email is not valid") {
       res.status(400).send({ msg: "email is not valid" });
