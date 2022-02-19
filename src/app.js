@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const userRouter = require("./routers/users/userRouter");
 const imageRouter = require("./routers/images/imagesRouter");
+const adminRouter = require("./routers/admin/adminRouter");
 
 //---------- the port
 const port = process.env.PORT || 3000;
@@ -30,6 +31,7 @@ app.use(express.json());
 //-----------routers
 app.use("/", userRouter);
 app.use("/", imageRouter);
+app.use("/", adminRouter);
 //main page
 app.get("/", (req, res) => {
   res.render("index");
