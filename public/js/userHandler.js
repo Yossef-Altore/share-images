@@ -50,11 +50,12 @@ inputFile.addEventListener(
         })
         .then((res) => {
           alert(res.msg);
+          data.delete("file");
         });
     } catch (e) {
       console.log(e);
+      data.delete("file");
     }
-    data.delete("file");
   },
   false
 );
