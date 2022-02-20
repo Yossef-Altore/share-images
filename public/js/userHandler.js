@@ -7,6 +7,7 @@ const header = document.querySelector("header");
 const main = document.querySelector("main");
 const closeBigImage = document.querySelector("#closeBigImage");
 const allImagesBtn = document.querySelector("#allImagesBtn");
+const uploadingGif = document.querySelector("#uploadingGif");
 
 ///--- resize the image , show original image in big div
 
@@ -36,14 +37,20 @@ const data = new FormData();
 inputFile.addEventListener(
   "change",
   async () => {
+    uploadingGif.style.display = "block";
     data.append("file", inputFile.files[0]);
     try {
       fetch("/addImage", {
         method: "POST",
         body: data,
       })
-        .then((res) => res.json())
-        .then((res) => alert(res.msg));
+        .then((res) => {
+          uploadingGif.style.display = "none";
+          return res.json();
+        })
+        .then((res) => {
+          alert(res.msg);
+        });
     } catch (e) {
       console.log(e);
     }

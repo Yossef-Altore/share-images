@@ -17,8 +17,13 @@ router.post("/registerNewUser", async (req, res) => {
   }
   const user = new User(req.body);
   try {
+    const token = jwt.sign({ _id: user._id.toString() }, KEY);
+    user.token = token;
+    res.cookie("token", token, {
+      httpOnly: true,
+    });
     await user.save();
-    res.status(201).send({ msg: "user registered", redirect: "/login" });
+    res.status(201).send({ msg: "user registered", redirect: "/userpage" });
   } catch (error) {
     if (error.message === "User validation failed: email: email is not valid") {
       res.status(400).send({ msg: "email is not valid" });
